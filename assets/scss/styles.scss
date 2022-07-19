@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  font-family: "Montserrat" ,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   line-height: 1.5;
   color: #333;
   background-color: #333;
@@ -43,12 +43,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #333;
+  transition: all 0.4s ease;
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 a:hover {
+  transition: all 0.4s ease;
   text-decoration: underline;
+  color:darkblue;
 }
+
 blockquote {
   border-left: 0.25em solid #333;
   padding-left: 0.5em;
@@ -87,19 +93,18 @@ img {
 }
 
 main {
-  max-width: 70ch;
+  max-width: 110ch;
   margin: 0 auto;
   box-sizing: border-box;
   min-height: 100%;
   background-color: white;
-
 }
 
 footer {
   border-top: 1px solid #333;
   background-color: #fff;
   padding: 2rem;
-  max-width: 70ch;
+  max-width: 110ch;
   margin: 0 auto;
   color: #333;
 }
@@ -125,9 +130,15 @@ time {
 }
 
 header {
-  background-color: #fff;
+  background: linear-gradient(35deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 83%, rgba(2,0,36,1) 100%);
   padding: 2rem;
   border-bottom: 1px solid #333;
+}
+
+header a {
+    font-weight: bold;
+    color: darkred;
+  text-decoration: none;
 }
 
 nav ul {
@@ -146,21 +157,12 @@ nav li:last-child {
   margin-right: 0;
 }
 
-nav a {
-  text-decoration: none;
-  color: inherit;
-}
-
-nav a:hover {
-  color: #505050;
-}
-
 .title {
   font-weight: bold;
-  font-size: 140%;
+  font-size: 180%;
   line-height: 1em;
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .content {
@@ -168,6 +170,49 @@ nav a:hover {
   word-wrap: break-word;
 }
 
-.content p a {
-  text-decoration: underline;
+figure figcaption {
+	font-style: italic;
+	font-weight: lighter;
+	margin-bottom: 10px;
+}
+
+.previews {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.previews li {
+    transition: all 3.0s ease;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.previews li:hover {
+    transition: all 0.5s ease;
+    background-color: lightblue;
+}
+
+.previews li img {
+    max-height: 200px;
+    max-width: 250px;
+    min-height: 150px;
+    min-width: 200px;
+}
+
+.construct{
+	padding: 3px;
+	background-color: rgb(255, 255, 116);
+	width: 100%;
+	text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.previews li video {
+    max-height: 300px;
 }

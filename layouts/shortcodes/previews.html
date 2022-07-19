@@ -1,0 +1,22 @@
+<h1 class="orange">Latest posts</h1>
+<ul class="previews">
+    {{ range first 10 .Site.RegularPages }}
+    {{ $title := .Title }}
+    {{ range last 1 .Resources }}
+    {{ if or (strings.HasSuffix .Permalink "png") (strings.HasSuffix .Permalink "gif") (strings.HasSuffix .Permalink
+    "webm") (strings.HasSuffix .Permalink "mp4") }}
+    <li>
+        <strong>{{ $title }}</strong><br>
+        {{ if (strings.HasSuffix .Permalink "webm")  }}
+        <video src="{{.Permalink }}" onmouseover="this.play()" onmouseout="this.pause();" type="video/webm" muted loop>
+            {{ else if (strings.HasSuffix .Permalink "mp4") }}
+        <video src="{{.Permalink }}" onmouseover="this.play()" onmouseout="this.pause();" type="video/mp4" muted loop>
+            {{ else }}
+            <img src="{{.Permalink }}">
+            {{ end }}
+    </li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</ul>
+<a href="/posts/">view more...</a>
