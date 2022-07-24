@@ -28,18 +28,14 @@ body {
 }
 
 h1 { font-size: 1.50em; }
-h2 { font-size: 1.40em; }
-h3 { font-size: 1.20em; }
-h4 { font-size: 1.00em; }
-h5 { font-size: 0.85em; }
-h6 { font-size: 0.75em; }
+h2 { font-size: 1.40em; border-bottom: 1px dotted black; }
+h3 { font-size: 1.20em; border-bottom: 1px dotted black;}
+h4 { font-size: 1.00em; border-bottom: 1px dotted black;}
+h5 { font-size: 0.85em; border-bottom: 1px dotted black;}
+h6 { font-size: 0.75em; border-bottom: 1px dotted black;}
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
 }
 
 a {
@@ -55,6 +51,14 @@ a:hover {
   color:darkblue;
 }
 
+p {
+    font-size: 1.3em;
+}
+
+strong {
+    font-weight: bolder;
+}
+
 blockquote {
   border-left: 0.25em solid #333;
   padding-left: 0.5em;
@@ -65,6 +69,7 @@ ul, ol {
   padding: 0 0 1rem 1rem;
   list-style-type: square;
   font-variant-numeric: tabular-nums;
+  font-size: 1.2em;
 }
 
 code, pre {
@@ -102,10 +107,12 @@ main {
 
 footer {
   border-top: 1px solid #333;
-  background-color: #fff;
-  padding: 2rem;
+  background: linear-gradient(35deg, rgba(200,200,200,1) 0%, rgba(255,255,255,1) 100%);
+  padding: 0.2em;
+  padding-right: 1em;
   max-width: 110ch;
   margin: 0 auto;
+  text-align: right;
   color: #333;
 }
 
@@ -116,9 +123,10 @@ footer {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  font-size: inherit;
+  font-size: 1.2em;
   font-weight: inherit;
 }
+
 .list li a {
     white-space: nowrap;
     overflow: hidden;
@@ -157,6 +165,11 @@ nav li:last-child {
   margin-right: 0;
 }
 
+table {
+    padding-bottom: 1em;
+    width:100%;
+}
+
 .title {
   font-weight: bold;
   font-size: 180%;
@@ -172,8 +185,9 @@ nav li:last-child {
 
 figure figcaption {
 	font-style: italic;
-	font-weight: lighter;
+    font-size: 1.2em;
 	margin-bottom: 10px;
+    color:darkblue;
 }
 
 .previews {
@@ -202,6 +216,43 @@ figure figcaption {
     max-width: 250px;
     min-height: 150px;
     min-width: 200px;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+h1 i {
+    font-size: 12px;
+}
+
+.nerd {
+	padding: 10px;
+    margin: 10px 5px 10px 0px;
+	background-color: rgb(173, 214, 255);
+	width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.plug {
+	padding: 10px;
+    margin: 10px 5px 10px 0px;
+	background-color: rgb(250, 197, 225);
+	width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.youtubetitle {
+    background-color: salmon;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    color: white;
 }
 
 .construct{
